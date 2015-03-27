@@ -1,7 +1,7 @@
 package subject.impl;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import observer.Observer;
 import subject.Subject;
@@ -12,20 +12,29 @@ import subject.Subject;
  */
 public class SubjectImpl implements Subject
 {
-  private List<Observer> observers = new ArrayList<>(10);
+  private Set<Observer> observers = new HashSet<>(10);
 
+  /**
+   * @see Subject#registerObserver(Observer)
+   */
   @Override
   public void registerObserver(Observer observer)
   {
     observers.add(observer);
   }
 
+  /**
+   * @see Subject#unregisterObserver(Observer)
+   */
   @Override
   public void unregisterObserver(Observer observer)
   {
     observers.remove(observer);
   }
 
+  /**
+   * @see Subject#notifyObservers()
+   */
   @Override
   public void notifyObservers()
   {
