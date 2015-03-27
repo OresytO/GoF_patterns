@@ -7,6 +7,8 @@ import observer.Observer;
 import subject.Subject;
 
 /**
+ * Implementation of subject interface
+ *
  * @author OrestO
  * @since 3/26/2015
  */
