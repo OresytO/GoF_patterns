@@ -14,7 +14,7 @@ import subject.Subject;
  */
 public class SubjectImpl implements Subject
 {
-  private Set<Observer> observers = new HashSet<>(10);
+  private Set<Observer> observers = new HashSet<>();
 
   /**
    * @see Subject#registerObserver(Observer)
